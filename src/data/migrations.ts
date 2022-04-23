@@ -9,7 +9,9 @@ const createTables = () => connection
     CREATE TABLE IF NOT EXISTS turma (
       id VARCHAR(255) PRIMARY KEY,
       nome VARCHAR(255),
-      modulo VARCHAR(255) DEFAULT 0
+      modulo VARCHAR(255) DEFAULT 0,
+      docentes VARCHAR(255),
+      estudantes VARCHAR(255)
    );
     CREATE TABLE IF NOT EXISTS estudante (
        id VARCHAR(255) PRIMARY KEY,
@@ -49,6 +51,11 @@ const createTables = () => connection
       especialidade_id VARCHAR(255) NOT NULL,
       FOREIGN KEY (especialidade_id) REFERENCES especialidade(id)
    );
+   INSERT INTO especialidade (id, nome) VALUES ('1', 'JS');
+   INSERT INTO especialidade (id, nome) VALUES ('2', 'CSS');
+   INSERT INTO especialidade (id, nome) VALUES ('3', 'React');
+   INSERT INTO especialidade (id, nome) VALUES ('4', 'Typescript');
+   INSERT INTO especialidade (id, nome) VALUES ('5', 'POO');
 `)
     .then(() => { console.log("Tabelas criadas") })
     .catch(printError)
