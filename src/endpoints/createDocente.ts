@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import { connection } from "../data/connection";
 import { Docente } from "../Classes/Docente";
 
-
 export async function createDocente(req: Request, res: Response) {
   const docenteId = new Date().getTime().toString();
   const docenteEspecialidadeTableId = new Date().getTime().toString();
@@ -11,7 +10,7 @@ export async function createDocente(req: Request, res: Response) {
 
   const docente = new Docente(docenteId, nome, email, data_nasc, turma_id);
 
-  if (!nome || !email || !data_nasc || !turma_id || !especialidade_id) {
+  if (!nome || !email || !data_nasc || !especialidade_id) {
     res.status(400).send({ message: "Preencha todos os campos" });
     return;
   }
@@ -23,6 +22,14 @@ export async function createDocente(req: Request, res: Response) {
             VALUES (?, ?, ?, ?, ?)
         `,
       [docenteId, nome, email, data_nasc, turma_id]
+    );
+    await connection.raw(
+      `
+            UPDATE turma
+            SET docentes = CONCAT(docentes, ', ${docenteId}')
+            WHERE id = '${turma_id}'
+            
+        `
     );
 
     if (especialidade_id.length > 1) {
