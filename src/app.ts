@@ -1,6 +1,9 @@
 import express,  { Request, Response } from "express";
 import cors from "cors";
 import { AddressInfo } from "net";
+import { CriarEstudante } from "./endpoints/criarEstudante";
+import { BuscarEstudante } from "./endpoints/buscarEstudante";
+import { EditarEstudante } from "./endpoints/mudarTurmaDoEstudante";
 
 
 export const app = express();
@@ -15,3 +18,9 @@ const server = app.listen(process.env.PORT || 3003, () => {
        console.error(`Failure upon starting server.`);
     }
 });
+
+app.post("/estudantes", CriarEstudante)
+
+app.get("/estudantes", BuscarEstudante)
+
+app.put("/estudantes/:id", EditarEstudante)
