@@ -23,10 +23,10 @@ Projeto backend de sistema de gerenciamento de estudantes, docentes e turmas da 
 
 ### Como rodar a aplicação:
 
+```
 No terminal, clone o projeto:
 
 git clone https://github.com/future4code/Vaughan-labenu-system9.git
-```
 
 Entre no projeto e instale as dependências através do comando:
 
