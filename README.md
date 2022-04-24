@@ -1,9 +1,11 @@
-## LabenuSystem:
+# LabenuSystem:
+
+![logo projeto](https://i.ibb.co/CWSWPbC/Screenshot-from-2022-04-24-17-37-22.png)
 
 ### Documentação postman: https://documenter.getpostman.com/view/19297915/UyrAGxR5
 
 ### Descrição:
-Sistema de gerenciamento de estudantes, docentes e turmas organização Labenu.
+Projeto backend de sistema de gerenciamento de estudantes, docentes e turmas da organização Labenu, utilizando typescript e NodeJs.
 
 ### Funcionalidades:
 
