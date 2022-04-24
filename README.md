@@ -1,24 +1,11 @@
 ## LabenuSystem:
 
-Você estuda na Labenu_ há tanto tempo que já parecem anos, não é? Então, hoje, vamos pedir para criar um sistema que represente o básico da nossa organização. 
+### Documentação postman: https://documenter.getpostman.com/view/19297915/UyrAGxR5
 
-Ele deve possuir, ao menos, as 3 entidades importantes:
+### Descrição:
+Sistema de gerenciamento de estudantes, docentes e turmas organização Labenu.
 
-1. Estudantes 
-
-    Representa estudantes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e os principais hobbies dele. 
-
-2. Docente
-
-    Representa docentes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e todas as especialidades dele. Há 7 especialidades: React, Redux, CSS, Testes, Typescript, Programação Orientada a Objetos e Backend
-
-3. Turma
-
-    Toda turma é composta das seguintes características: id, nome, data de início, data de término, lista de professores responsáveis, uma lista de alunos e módulo atual em que a turma está.
-
-    O módulo pode assumir os valores de 1 a 7 ou `undefined`, indicando que as aulas dessa turma ainda não começaram. Para esse exercício, vamos considerar que existam dois tipos de turma: integral ou noturna. Há uma restrição para o nome das turmas noturnas: tem que terminar com `-na-night`.
-
-As funcionalidades básicas são:
+### Funcionalidades:
 
 → Criar estudante;
 
@@ -28,6 +15,55 @@ As funcionalidades básicas são:
 
 → Adicionar estudante na turma;
 
-→ Adicionar docente na turma;
+→ Adicionar docente na turma; e
 
 → Pegar a idade de algum estudante a partir do id
+
+### Como rodar a aplicação:
+
+No terminal, clone o projeto:
+
+git clone https://github.com/future4code/Vaughan-labenu-system9.git
+```
+
+Entre no projeto e instale as dependências através do comando:
+
+npm install
+
+Por último, suba a aplicação:
+
+npm start
+```
+
+## 🤝 Colaboradores
+
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/FillipeCO">
+        <img src="https://avatars.githubusercontent.com/u/87552890?v=4" width="100px;" alt="Foto do Fillipe no GitHub"/><br>
+        <sub>
+          <b>Fillipe Dias</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/graziellemcm">
+        <img src="https://avatars.githubusercontent.com/u/62907120?v=4" width="100px;" alt="Foto da Grazielle"/><br>
+        <sub>
+          <b>Grazielle Martins</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/59378360?v=4" width="100px;" alt="foto victor github"/><br>
+        <sub>
+          <b>Victor Xavier</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
