@@ -18,7 +18,7 @@ const createTables = () => connection
        nome VARCHAR(255) NOT NULL,
        email VARCHAR(255) UNIQUE NOT NULL,
        data_nasc DATE NOT NULL,
-       turma_id VARCHAR(255) NOT NULL,
+       turma_id VARCHAR(255),
        FOREIGN KEY (turma_id) REFERENCES turma(id)
     );
     CREATE TABLE IF NOT EXISTS hobby (
@@ -37,7 +37,7 @@ const createTables = () => connection
       nome VARCHAR(255),
       email VARCHAR(255) UNIQUE NOT NULL,
       data_nasc DATE NOT NULL,
-      turma_id VARCHAR(255) NOT NULL,
+      turma_id VARCHAR(255),
       FOREIGN KEY (turma_id) REFERENCES turma(id)
    );
    CREATE TABLE IF NOT EXISTS especialidade (

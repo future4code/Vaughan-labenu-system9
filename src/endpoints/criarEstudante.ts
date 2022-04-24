@@ -73,3 +73,23 @@ export const CriarEstudante = async (req: Request, res: Response): Promise<void>
         res.send(error.message || error.sqlMessage)
     }
 }
+
+// Exibir estudantes que possuam o mesmo hobby;
+
+export async function getEstudantesHobby(req: Request, res: Response) {
+    try {
+        const { hobbyName } = req.params;
+        const result = await connection.raw(`
+            SELECT estudante.nome, estudante.email, estudante.data_nasc, estudante.turma_id
+            FROM estudante
+            INNER JOIN estudante_hobby ON estudante.id = estudante_hobby.estudante_id
+            INNER JOIN hobby ON estudante_hobby.hobby_id = hobby.id
+            WHERE hobby.nome = '${hobbyName}'
+        `);
+        res.status(200).send(result[0]);
+    } catch (err: any) {
+        res.status(400).send({
+            message: err.message,
+        });
+    }
+}
