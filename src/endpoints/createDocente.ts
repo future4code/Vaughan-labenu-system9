@@ -23,14 +23,6 @@ export async function createDocente(req: Request, res: Response) {
         `,
       [docenteId, nome, email, data_nasc, turma_id]
     );
-    await connection.raw(
-      `
-            UPDATE turma
-            SET docentes = CONCAT(docentes, ', ${docenteId}')
-            WHERE id = '${turma_id}'
-            
-        `
-    );
 
     if (especialidade_id.length > 1) {
       for (let i = 0; i < especialidade_id.length; i++) {
