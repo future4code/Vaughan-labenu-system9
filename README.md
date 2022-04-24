@@ -58,7 +58,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/Vsux17">
         <img src="https://avatars.githubusercontent.com/u/59378360?v=4" width="100px;" alt="foto victor github"/><br>
         <sub>
           <b>Victor Xavier</b>
